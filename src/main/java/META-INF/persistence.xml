@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="WebEmployeeApp" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa</provider>
+		<class>model.EmployeeList</class>
+		<class>model.Employees</class>
+		<class>model.EmployeeListDetails</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/employee"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="Nov2920020@dmacc.edu"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.jdbc.exclusive-connection.mode" value="Transactional"/>
+		</properties>
+	</persistence-unit>
+</persistence>
